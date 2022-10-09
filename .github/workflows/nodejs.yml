@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: write
 # 任务
 jobs:
   build-and-deploy:
@@ -19,7 +21,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-          persist-credentials: false
 
       # 生成静态文件
       - name: Build
@@ -35,5 +36,5 @@ jobs:
           # 打包后的文件部署到哪个分支上
           BRANCH: gh-pages
           # 打包后的文件在哪里
-          FOLDER: /dist
+          FOLDER: dist
 
