@@ -26,7 +26,7 @@
         "test:rules": "node __test__/rule",
         "release:demo": "cd packages/www && yarn release",
         "dev:demo": "cd packages/www && yarn serve",
-        "build:page": "cd packages/www && yarn build"
+        "build:page": "cd packages/www && npm run build"
     },
     "engines": {
         "vscode": "^1.12.0"
